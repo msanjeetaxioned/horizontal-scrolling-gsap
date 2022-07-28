@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+figure img {
+  margin: 0 auto;
+  display: block;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.horizontal-coordinate {
+  position: fixed;
+  z-index: 100;
+  top: 50px;
+  left: 50px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.extra-long-container {
+  width: 7000px;
+  height: 100%;
+  position: relative;
+  background: slateblue;
+}
+.extra-long-container .flower1 {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 1800px;
+  transform: translate(0, -50%);
+}
+.extra-long-container .flower1 img {
+  width: 300px;
+  height: auto;
+}/*# sourceMappingURL=horizontal-scroll.css.map */
