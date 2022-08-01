@@ -40,12 +40,23 @@ figure {
         position: absolute;
         z-index: 3;
         top: 50%;
-        left: 1800px;
+        left: 2500px;
         transform: translate(0, -50%);
 
         img {
             width: 300px;
             height: auto;
         }
+    }
+    
+    .box1 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 1200px;
+        background: blue;
+        transform: translate(0, -50%);
     }
 }

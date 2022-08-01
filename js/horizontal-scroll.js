@@ -16,21 +16,19 @@ const onScroll = (event) => {
 document.addEventListener("wheel", onScroll);
 
 gsap.registerPlugin(ScrollTrigger);
-// const t1 = gsap.timeline({
-    
-//     paused: true
-// });
-
-gsap.to(".flower1", {
+const t1 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".flower1",
-        start: "left center",
+        trigger: ".box1",
+        start: "left 70%",
+        end: "left 20%",
+        horizontal: true,
         scrub: true,
-        // toggleActions: "play pause reverse pause",
-        markers: true
+        // markers: true
     },
+});
+
+t1.to(".box1", {
     scale: 2,
     rotation: 360,
-    duration: 3,
-    paused: true
+    duration: 3
 });
