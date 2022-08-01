@@ -1,6 +1,10 @@
+::-webkit-scrollbar { display: none; }
+html { scrollbar-width: none; }
+
 body {
     margin: 0;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
+    -ms-overflow-style: none;
 }
 
 * { box-sizing: border-box; }
@@ -17,17 +21,6 @@ figure {
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow: hidden;
-}
-
-.horizontal-coordinate {
-    position: fixed;
-    z-index: 100;
-    top: 50px;
-    left: 50px;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
 }
 
 .extra-long-container {
@@ -49,7 +42,7 @@ figure {
         }
     }
     
-    .box1 {
+    .square1 {
         width: 200px;
         height: 200px;
         position: absolute;
