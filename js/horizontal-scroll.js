@@ -15,15 +15,25 @@ const onScroll = (event) => {
 
 document.addEventListener("wheel", onScroll);
 
+let scrollTween = gsap.to(".main-container", {
+    xPercent: -100,
+    ease: "none", // <-- IMPORTANT!
+    scrollTrigger: {
+      trigger: ".main-container",
+      start: "top top",
+      end: extraLongContainer.offsetWidth,
+      scrub: 1
+    }
+});
+
 gsap.registerPlugin(ScrollTrigger);
 const t1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".box1",
         start: "left 70%",
         end: "left 20%",
-        horizontal: true,
-        scrub: true,
-        // markers: true
+        scrub: 1,
+        containerAnimation: scrollTween
     },
 });
 
