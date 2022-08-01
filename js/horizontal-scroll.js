@@ -1,6 +1,9 @@
-const mainContainer = document.querySelector(".main-container");
+gsap.registerPlugin(ScrollTrigger);
+
+const body = document.querySelector("body");
+const mainContainer = body.querySelector(".main-container");
 const extraLongContainer = mainContainer.querySelector(".extra-long-container");
-const horizontalCoordinate = mainContainer.querySelector(".horizontal-coordinate");
+const horizontalCoordinate = body.querySelector(".horizontal-coordinate");
 
 const onScroll = (event) => {
     const delta = Math.sign(event.deltaY);
@@ -20,20 +23,20 @@ let scrollTween = gsap.to(".main-container", {
     ease: "none", // <-- IMPORTANT!
     scrollTrigger: {
       trigger: ".main-container",
-      start: "top top",
-      end: extraLongContainer.offsetWidth,
+      start: "left left",
+      end: () => "+=" + extraLongContainer.offsetWidth,
       scrub: 1
     }
 });
 
-gsap.registerPlugin(ScrollTrigger);
 const t1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".box1",
         start: "left 70%",
         end: "left 20%",
         scrub: 1,
-        containerAnimation: scrollTween
+        containerAnimation: scrollTween,
+        markers: true
     },
 });
 
